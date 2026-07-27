@@ -21,6 +21,13 @@ A typical archive includes:
 | `poc-data/runner.json` | Structured exploit / runner metadata for analysis |
 | `anvil_state.json` | Snapshot state for local reproduction |
 | `sources/` | Relevant contract sources used by the PoC |
+| `registry/` | Exact source-backed Forge test, project sources, write-up, and trace |
+
+For source-backed AuditVault findings, `registry/` is the authoritative
+reproduction. The `poc-data/` projection remains the browser/analyzer format;
+run the Forge test from the registry checkout to reproduce the real vulnerable
+call path. Findings whose historical source is unavailable or non-EVM are
+documented on the website but intentionally have no runnable ZIP.
 
 There are hundreds of historical and recent DeFi / EVM hack PoCs spanning from early multi-sig incidents through modern protocol exploits.
 
